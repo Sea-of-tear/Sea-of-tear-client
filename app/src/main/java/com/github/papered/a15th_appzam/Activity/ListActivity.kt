@@ -31,7 +31,17 @@ class ListActivity : AppCompatActivity() {
                         adapter.notifyDataSetChanged()
                         adapter.setItemClick(object : PostAdapter.ItemClick {
                             override fun onClick(view: View, position: Int) {
+                                Connector.api.getDetail(Util.getToken(baseContext),"5ac0055b4a7af308ba355535")
+                                        .enqueue(object : Callback<Void> {
+                                            override fun onFailure(call: Call<Void>?, t: Throwable?) {
 
+                                            }
+
+                                            override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
+
+                                            }
+
+                                        })
                             }
 
                         })

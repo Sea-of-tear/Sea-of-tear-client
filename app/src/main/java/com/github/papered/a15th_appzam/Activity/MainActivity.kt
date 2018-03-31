@@ -3,8 +3,10 @@ package com.github.papered.a15th_appzam.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.NavigationView
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Gravity
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import com.github.papered.a15th_appzam.Adapter.CategoryAdapter
@@ -20,20 +22,21 @@ import android.widget.ListView
 import com.github.papered.a15th_appzam.Util
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nv_item_myPage -> startActivity(Intent(baseContext, ProfileActivity::class.java))
+        }
+        return true
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val items = arrayOf("내 정보 보기","눈물 드라이기")
+        val items = arrayOf("내 정보 보기", "눈물 드라이기")
         val navigationAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, items)
 
-        
-        nvView.setOnClickListener {
-            when(it.id){
-                R.id.nv_item_myPage -> startActivity(Intent(baseContext,))
-            }
-        }
 
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
@@ -44,9 +47,9 @@ class MainActivity : AppCompatActivity() {
 //                Toast.makeText(baseContext, adapterlistItem[position], Toast.LENGTH_SHORT).show()
 //                Connector.api.getPostList(position).enqueue(object : Callback<PostModel> {
 //                    override fun onResponse(call: Call<PostModel>?, response: Response<PostModel>?) {
-                        val intent = Intent(baseContext, ListActivity::class.java)
+                val intent = Intent(baseContext, ListActivity::class.java)
 //                        intent.putExtra("position", position)
-                        startActivity(intent)
+                startActivity(intent)
 //                    }
 //
 //                    override fun onFailure(call: Call<PostModel>?, t: Throwable?) {

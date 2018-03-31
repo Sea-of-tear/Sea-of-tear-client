@@ -31,6 +31,10 @@ class CategoryAdapter(val context: Context, val data: ArrayList<String>) : Recyc
         holder!!.itemView.setOnClickListener {
             itemClick!!.onClick(holder.itemView, position)
         }
+
+        when(position){
+
+        }
     }
 
     override fun getItemCount(): Int = data.size
