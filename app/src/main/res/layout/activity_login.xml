@@ -31,7 +31,7 @@
         android:weightSum="881">
 
         <EditText
-            android:id="@+id/ID"
+            android:id="@+id/login_edit_id"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
@@ -40,7 +40,7 @@
             android:textColorHint="#dddeff" />
 
         <EditText
-            android:id="@+id/PW"
+            android:id="@+id/login_edit_pw"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="PASSWORD"
