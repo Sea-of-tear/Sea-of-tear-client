@@ -1,9 +1,12 @@
 package com.github.papered.a15th_appzam.Activity
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.github.papered.a15th_appzam.Connect.Connector
 import com.github.papered.a15th_appzam.R
+import com.github.papered.a15th_appzam.R.id.login_edit_id
+import com.github.papered.a15th_appzam.R.id.login_edit_pw
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback

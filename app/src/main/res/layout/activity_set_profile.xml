@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.github.papered.a15th_appzam.Activity.SetProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="top|center">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="50dp"
+            android:background="#379fe1"
+            android:id="@+id/profile_img"
+            android:src="@drawable/ic_person_black_24dp" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            android:background="#2f83c4"
+            android:gravity="center"
+            android:text="프로필 이미지 추가"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:id="@+id/add_img"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/nickname"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:hint="닉네임"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:hint="소개" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="bottom"
+        android:text="저장"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+</FrameLayout>
