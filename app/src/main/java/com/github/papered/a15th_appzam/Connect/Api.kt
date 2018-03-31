@@ -11,4 +11,5 @@ import retrofit2.http.POST
 interface Api {
     @POST("auth")
     fun auth(@Field("id") id: String, @Field("pw") pw: String) : Call<Void>
+    fun signIn(@Field("id") id:String, @Field("pw") pw: String, @Field("email") email:String) : Call<Void>
 }
