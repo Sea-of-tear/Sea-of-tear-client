@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nv_item_myPage"
+            android:title="마이페이지" />
+        <item
+            android:id="@+id/nv_item_dry"
+            android:title="눈물 드라이기" />
+
+    </group>
+</menu>

@@ -39,7 +39,7 @@ class SetProfileActivity : AppCompatActivity() {
 
         }
 
-        setProfile_btn_addImg.setOnClickListener {
+        setProfile_img_profile.setOnClickListener {
             TedPermission.with(this)
                     .setPermissionListener(permissionListener)
                     .setPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE)

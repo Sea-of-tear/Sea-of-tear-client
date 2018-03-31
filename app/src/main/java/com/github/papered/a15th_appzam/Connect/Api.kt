@@ -22,10 +22,13 @@ interface Api {
     @FormUrlEncoded
     fun setProfile(@Header("Authorization") Authorization: String, @Field("nickname") nickname: String, @Field("introduction") description: String): Call<Void>
 
+    @GET("/my-page")
+    fun getProfile(@Header("Authorization") Authorization: String) : Call<Void>
+
     @POST("/post-eye")
     @FormUrlEncoded
     fun postEye(@Header("Authorization") Authorization: String, @Field("title") title: String, @Field("description") description: String, @Field("background") background: Int, @Field("category") category: Int): Call<Void>
 
-    @GET("/eye/{category}")
-    fun getPostList(@Path(value = "category", encoded = true) category: Int): Call<PostModel>
+    @GET("/eye-list")
+    fun getPostList(@Header("Authorization") Authorization: String, @Query("category") category: Int): Call<PostModel>
 }

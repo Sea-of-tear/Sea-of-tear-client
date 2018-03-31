@@ -1,10 +1,12 @@
 package com.github.papered.a15th_appzam.Model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 /**
  * Created by PaperEd on 2018-04-01.
  */
+@SuppressWarnings("serial")
 class PostModel {
 
     @SerializedName("title")
