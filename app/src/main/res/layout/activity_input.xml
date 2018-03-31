@@ -57,6 +57,7 @@
         android:inputType="text"
         android:textColorHint="#000"
         android:textSize="17dp"
+        android:theme="@style/EditTextStyle"
         android:textStyle="bold" />
 
     <FrameLayout
