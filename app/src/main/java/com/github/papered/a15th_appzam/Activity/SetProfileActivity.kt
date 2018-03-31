@@ -10,8 +10,13 @@ import android.os.Bundle
 import com.github.papered.a15th_appzam.R
 import kotlinx.android.synthetic.main.activity_set_profile.*
 import android.widget.Toast
+import com.github.papered.a15th_appzam.Connect.Connector
+import com.github.papered.a15th_appzam.Util
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.TedPermission
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class SetProfileActivity : AppCompatActivity() {
@@ -47,12 +52,27 @@ class SetProfileActivity : AppCompatActivity() {
             intent.type = "image/*"
             startActivityForResult(intent, 1112)
         }
+
+        setProfile_btn_submit.setOnClickListener {
+            Connector.api.setProfile(Util.token, setProfile_edit_nickname.text.toString(), setProfile_edit_description.text.toString())
+                    .enqueue(object : Callback<Void> {
+                        override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
+                            Toast.makeText(baseContext, "성공", Toast.LENGTH_SHORT).show()
+                        }
+
+                        override fun onFailure(call: Call<Void>?, t: Throwable?) {
+                            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                        }
+
+                    })
+        }
     }
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if(resultCode == Activity.RESULT_OK){
+        if (resultCode == Activity.RESULT_OK) {
             val image = data!!.data
             setProfile_img_profile.setImageURI(image)
         }
