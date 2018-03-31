@@ -20,8 +20,6 @@ class SetProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_set_profile)
 
-        startActivity(Intent(this, ContentActivity::class.java))
-
         setProfile_img_profile.background = ShapeDrawable(OvalShape())
         setProfile_img_profile.clipToOutline = true
 
