@@ -48,12 +48,24 @@
 
                 </LinearLayout>
 
-                <android.support.v7.widget.Toolbar
+                <FrameLayout
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     app:layout_collapseMode="pin"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_menu_black_24dp"/>
+
+                    <android.support.v7.widget.SearchView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"></android.support.v7.widget.SearchView>
+
+                </FrameLayout>
 
 
             </android.support.design.widget.CollapsingToolbarLayout>
