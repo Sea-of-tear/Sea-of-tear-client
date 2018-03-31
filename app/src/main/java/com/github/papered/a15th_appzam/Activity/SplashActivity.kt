@@ -11,7 +11,7 @@ class SplashActivity : AppCompatActivity() {
         setTheme(R.style.SplashTheme)
         super.onCreate(savedInstanceState)
 
-        startActivity(Intent(this, LoginActivity::class.java))
+        startActivity(Intent(this, InputActivity::class.java))
         finish()
     }
 }

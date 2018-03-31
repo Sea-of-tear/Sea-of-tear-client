@@ -21,16 +21,16 @@ class InputActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input)
         val spinnerAdapter = ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, listOf("연애", "취업-진로", "인간관계", "반려동물", "기타"))
-        var genre = ""
+        var genre = 0
         input_spinner.adapter = spinnerAdapter
-
+        Toast.makeText(baseContext, Util.getToken(baseContext),Toast.LENGTH_SHORT).show()
         input_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(p0: AdapterView<*>?) {
 
             }
 
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                genre = input_spinner.getItemAtPosition(p2).toString()
+                genre = p2
             }
 
         }

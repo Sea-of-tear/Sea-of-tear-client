@@ -24,8 +24,9 @@ class JoinActivity : AppCompatActivity() {
                         join_edit_pw.text.toString(),
                         join_edit_email.text.toString()).enqueue(object : Callback<Void> {
                     override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
-                        Toast.makeText(baseContext, "성공", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(baseContext,SetProfileActivity::class.java))
+                        Toast.makeText(baseContext, "로그인에 성공했습니다", Toast.LENGTH_SHORT).show()
+//                        startActivity(Intent(baseContext,SetProfileActivity::class.java))
+                        finish()
                     }
 
                     override fun onFailure(call: Call<Void>?, t: Throwable?) {

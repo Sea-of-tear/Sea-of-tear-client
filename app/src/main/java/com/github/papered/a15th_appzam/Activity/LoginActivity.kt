@@ -31,6 +31,7 @@ class LoginActivity : AppCompatActivity() {
                         Util.saveToken("JWT " + res.token, baseContext)
                     }
                     startActivity(Intent(baseContext, SetProfileActivity::class.java))
+                    finish()
                 }
 
                 override fun onFailure(call: Call<Jwt>?, t: Throwable?) {

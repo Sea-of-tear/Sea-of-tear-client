@@ -2,6 +2,7 @@ package com.github.papered.a15th_appzam.Adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +26,11 @@ class CategoryAdapter(val context: Context, val data: ArrayList<String>) : Recyc
     }
 
     override fun onBindViewHolder(holder: CategoryHolder?, position: Int) {
+        Log.d("CategoryAdapter: ", data.toString())
         holder?.bind(data[position], context)
+        holder!!.itemView.setOnClickListener {
+            itemClick!!.onClick(holder.itemView, position)
+        }
     }
 
     override fun getItemCount(): Int = data.size

@@ -1,6 +1,7 @@
 package com.github.papered.a15th_appzam.Connect
 
 import com.github.papered.a15th_appzam.Model.Jwt
+import com.github.papered.a15th_appzam.Model.PostModel
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -21,8 +22,10 @@ interface Api {
     @FormUrlEncoded
     fun setProfile(@Header("Authorization") Authorization: String, @Field("nickname") nickname: String, @Field("introduction") description: String): Call<Void>
 
-    @POST("post-eye")
+    @POST("/post-eye")
     @FormUrlEncoded
-    fun postEye(@Header("Authorization") Authorization: String, @Field("title") title: String, @Field("description") description: String, @Field("background") background: Int, @Field("category") category: String): Call<Void>
+    fun postEye(@Header("Authorization") Authorization: String, @Field("title") title: String, @Field("description") description: String, @Field("background") background: Int, @Field("category") category: Int): Call<Void>
 
+    @GET("/eye/{category}")
+    fun getPostList(@Path(value = "category", encoded = true) category: Int): Call<PostModel>
 }

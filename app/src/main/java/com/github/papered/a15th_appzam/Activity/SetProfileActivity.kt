@@ -58,6 +58,8 @@ class SetProfileActivity : AppCompatActivity() {
                     .enqueue(object : Callback<Void> {
                         override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
                             Toast.makeText(baseContext, "성공", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(baseContext, MainActivity::class.java))
+                            finish()
                         }
 
                         override fun onFailure(call: Call<Void>?, t: Throwable?) {
