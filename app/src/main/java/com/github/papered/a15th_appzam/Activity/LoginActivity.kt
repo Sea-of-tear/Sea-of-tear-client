@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
         login_btn_submit.setOnClickListener {
             Connector.api.auth(login_edit_id.text.toString(), login_edit_pw.text.toString()).enqueue(object : Callback<Jwt> {
                 override fun onResponse(call: Call<Jwt>?, response: Response<Jwt>?) {
@@ -33,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(call: Call<Jwt>?, t: Throwable?) {
-                    Toast.makeText(baseContext,"안되냐고",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext, "안되냐고", Toast.LENGTH_SHORT).show()
                 }
 
             })

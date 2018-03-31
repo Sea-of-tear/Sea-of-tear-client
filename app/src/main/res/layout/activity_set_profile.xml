@@ -64,6 +64,7 @@
             android:maxLines="1"
             android:hint="한줄소개"
             android:textColorHint="@color/colorPrimary" />
+
     </LinearLayout>
 
     <Button
