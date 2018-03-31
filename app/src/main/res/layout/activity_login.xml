@@ -10,11 +10,10 @@
     tools:context="com.github.papered.a15th_appzam.Activity.LoginActivity">
 
     <ImageView
-        android:id="@+id/login_image_logo"
         android:layout_width="180dp"
         android:layout_height="40dp"
         android:layout_weight="3"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@mipmap/ic_launcher_round"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -30,31 +29,32 @@
         android:layout_weight="3"
         android:weightSum="2"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center_horizontal">
 
         <EditText
-            android:id="@+id/login_edit_id"
+            android:id="@+id/ID"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="ID"/>
+            android:hint="ID"
+            android:layout_marginBottom="40dp"/>
 
         <EditText
-            android:id="@+id/login_edit_pw"
+            android:id="@+id/PW"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
             android:hint="PASSWORD"/>
     </LinearLayout>
 
     <Button
         android:layout_width="150dp"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.9"
         android:background="@color/colorPrimary"
         android:text="로그인"
         android:textColor="#fff"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:layout_width="70dp"
