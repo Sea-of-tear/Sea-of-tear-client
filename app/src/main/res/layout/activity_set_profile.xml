@@ -53,13 +53,14 @@
             android:layout_height="60dp"
             android:layout_marginBottom="10dp"
             android:hint="닉네임"
+            android:inputType="text"
             android:textColorHint="@color/colorPrimary" />
 
         <EditText
             android:id="@+id/description"
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:hint="소개"
+            android:hint="한줄소개"
             android:textColorHint="@color/colorPrimary" />
     </LinearLayout>
 
