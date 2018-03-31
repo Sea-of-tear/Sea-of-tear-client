@@ -21,5 +21,8 @@ interface Api {
     @FormUrlEncoded
     fun setProfile(@Header("Authorization") Authorization: String, @Field("nickname") nickname: String, @Field("introduction") description: String): Call<Void>
 
+    @POST("post-eye")
+    @FormUrlEncoded
+    fun postEye(@Header("Authorization") Authorization: String, @Field("title") title: String, @Field("description") description: String, @Field("background") background: Int, @Field("category") category: String): Call<Void>
 
 }
