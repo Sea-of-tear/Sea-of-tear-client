@@ -31,4 +31,7 @@ interface Api {
 
     @GET("/eye-list")
     fun getPostList(@Header("Authorization") Authorization: String, @Query("category") category: Int): Call<PostModel>
+
+    @GET("/eye/{id}")
+    fun getDetail(@Header("Authorization")Authorization: String,@Path(encoded = true, value = "id")id:String) : Call<Void>
 }

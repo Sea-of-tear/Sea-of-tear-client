@@ -44,8 +44,12 @@
                     app:layout_collapseParallaxMultiplier="0.7">
 
 
-                    <android.support.v4.view.ViewPager
+                    <TextView
                         android:id="@+id/viewPager"
+                        android:layout_marginTop="60dp"
+                        android:background="@drawable/image_3"
+                        android:text="오늘따라 네가 너무 \n 보고싶다고 생각했는데\n 다시생각해보니 \n 나는 항상 너 보고싶었다."
+                        android:gravity="center_horizontal|center_vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
 
@@ -63,10 +67,10 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_menu_black_24dp" />
 
-                    <android.support.v7.widget.SearchView
+                    <ImageView
                         android:layout_width="40dp"
                         android:layout_height="match_parent"
-                        android:layout_gravity="right"></android.support.v7.widget.SearchView>
+                        android:layout_gravity="right"></ImageView>
 
                 </FrameLayout>
 
