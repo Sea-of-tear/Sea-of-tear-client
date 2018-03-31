@@ -26,7 +26,9 @@
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.JoinActivity" />
         <activity android:name=".Activity.SetProfileActivity" />
-        <activity android:name=".Activity.BoardActivity"></activity>
+        <activity android:name=".Activity.BoardActivity" />
+        <activity android:name=".Activity.ContentActivity" />
+        <activity android:name=".Activity.InputActivity"></activity>
     </application>
 
 </manifest>
