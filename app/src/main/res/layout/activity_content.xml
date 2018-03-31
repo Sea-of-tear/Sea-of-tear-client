@@ -33,22 +33,26 @@
             android:textSize="25dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="완료"
-            android:textColor="#fff"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.5"
+        android:gravity="left|center_vertical"
+        android:hint="제목"
+        android:inputType="text"
+        android:textColorHint="#000"
+        android:textSize="17dp"
+        android:textStyle="bold" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4.4">
+        android:layout_weight="4">
 
         <ImageView
             android:layout_width="match_parent"
@@ -64,47 +68,65 @@
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="4.4"
             android:gravity="center"
+            android:textColor="#fff"
             android:background="@null"
             android:text="CONTENT"
             android:textSize="15dp"
             android:layout_gravity="center"/>
 
         <TextView
-            android:id="@+id/title"
-            android:layout_width="300dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="40dp"
-            android:layout_marginTop="40dp"
-            android:layout_weight="1"
-            android:gravity="left|center_vertical"
-            android:hint="제목"
-            android:inputType="text"
-            android:textColorHint="#000"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yyyy/mm/dd"
+            android:layout_margin="10dp"
+            android:textColor="#fff"
+            android:layout_gravity="right|top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tears"
+            android:text="10"
+            android:textColor="#fff"
+            android:drawableLeft="@drawable/tear_icon"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="10dp"/>
+
     </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.5"></android.support.v7.widget.RecyclerView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.6"
-        android:gravity="right"
-        android:orientation="horizontal">
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:background="@color/colorPrimary">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:background="@drawable/bacground_round"
+            android:id="@+id/comment_content"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="전송"
+            android:background="@drawable/bacground_round"
+            android:layout_margin="10dp"
+            android:id="@+id/send_btn"/>
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/comment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3.2"></ListView>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.8"
-        />
 
 </LinearLayout>
