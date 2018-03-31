@@ -18,19 +18,19 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        Connector.api.auth(login_edit_id.text.toString(), login_edit_pw.text.toString()).enqueue(object : Callback<Void> {
-            override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
-                if (response!!.isSuccessful) {
-                    when (response.code()) {
-
-                    }
-                }
-            }
-
-            override fun onFailure(call: Call<Void>?, t: Throwable?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-
-        })
+//        Connector.api.auth(login_edit_id.text.toString(), login_edit_pw.text.toString()).enqueue(object : Callback<Void> {
+//            override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
+//                if (response!!.isSuccessful) {
+//                    when (response.code()) {
+//
+//                    }
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<Void>?, t: Throwable?) {
+//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//            }
+//
+//        })
     }
 }
