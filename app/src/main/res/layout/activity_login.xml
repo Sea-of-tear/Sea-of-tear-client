@@ -41,8 +41,10 @@
             android:id="@+id/login_edit_id"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:layout_marginBottom="40dp"
             android:layout_marginTop="80dp"
+            android:maxLines="1"
             android:hint="ID"
             android:textColorHint="#dddeff" />
 
@@ -51,6 +53,8 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:maxLines="1"
             android:textColorHint="#dddeff"
             android:layout_marginBottom="10dp"/>
 
@@ -66,7 +70,7 @@
             android:textSize="15dp" />
 
         <TextView
-            android:id="@+id/join_btn"
+            android:id="@+id/login_text_auth"
             android:layout_width="70dp"
             android:layout_height="0dp"
             android:layout_weight="100"

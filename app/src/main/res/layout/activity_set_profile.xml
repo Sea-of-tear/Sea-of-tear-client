@@ -48,23 +48,27 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/nickname"
+            android:id="@+id/setProfile_edit_nickname"
             android:layout_width="300dp"
             android:layout_height="60dp"
+            android:inputType="text"
+            android:maxLines="1"
             android:layout_marginBottom="10dp"
             android:hint="닉네임"
-            android:inputType="text"
             android:textColorHint="@color/colorPrimary" />
 
         <EditText
-            android:id="@+id/description"
+            android:id="@+id/setProfile_edit_description"
             android:layout_width="300dp"
             android:layout_height="60dp"
+            android:maxLines="1"
             android:hint="한줄소개"
             android:textColorHint="@color/colorPrimary" />
+
     </LinearLayout>
 
     <Button
+        android:id="@+id/setProfile_btn_submit"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="bottom"
