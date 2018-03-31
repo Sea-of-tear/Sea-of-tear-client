@@ -12,14 +12,23 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="453">
+        android:layout_weight="453"
+        android:background="@color/colorPrimary">
 
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="match_parent"
             android:layout_gravity="right"
             android:background="#dddeff"
             android:src="@drawable/logo" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/all_icon"/>
     </FrameLayout>
 
     <LinearLayout

@@ -4,14 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.github.papered.a15th_appzam.Activity.MainActivity"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    tools:context="com.github.papered.a15th_appzam.Activity.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="Search"
+                android:layout_weight="8"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="검섹"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -30,12 +57,23 @@
             app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <ImageView
+            <LinearLayout
                 android:id="@+id/backgroundImageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
-                android:scaleType="centerCrop"/>
+                android:orientation="vertical"
+                android:scaleType="centerCrop"
+                android:src="@drawable/all_icon"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+            </LinearLayout>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -47,13 +85,4 @@
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
-
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:clickable="true"
-        app:layout_anchor="@+id/appBarLayout"
-        app:layout_anchorGravity="bottom|right|end"/>
-
 </android.support.design.widget.CoordinatorLayout>
