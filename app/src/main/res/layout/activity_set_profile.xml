@@ -44,20 +44,29 @@
             android:layout_width="200dp"
             android:layout_height="180dp"
             android:layout_marginTop="50dp"
-            android:background="@color/colorPrimaryDark"
-            android:src="@drawable/ic_person_black_24dp" />
+            android:background="@drawable/oval"
+            android:src="@drawable/ic_person_black_24dp"
+            android:layout_marginBottom="50dp"/>
 
-        <Button
-            android:id="@+id/setProfile_btn_addImg"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="30dp"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            android:text="프로필 이미지 추가"
-            android:textColor="#fff"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+        <!--<ImageView-->
+            <!--android:id="@+id/setProfile_img_profile"-->
+            <!--android:layout_width="200dp"-->
+            <!--android:layout_height="180dp"-->
+            <!--android:layout_marginTop="50dp"-->
+            <!--android:background="@color/colorPrimaryDark"-->
+            <!--android:src="@drawable/ic_person_black_24dp" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/setProfile_btn_addImg"-->
+            <!--android:layout_width="200dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_marginBottom="30dp"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:gravity="center"-->
+            <!--android:text="프로필 이미지 추가"-->
+            <!--android:textColor="#fff"-->
+            <!--android:textSize="20dp"-->
+            <!--android:textStyle="bold" />-->
 
         <EditText
             android:id="@+id/setProfile_edit_nickname"
