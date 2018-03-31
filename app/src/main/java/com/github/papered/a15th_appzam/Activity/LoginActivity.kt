@@ -18,7 +18,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        startActivity(Intent(this, MainActivity::class.java))
 
 //        Connector.api.auth(login_edit_id.text.toString(), login_edit_pw.text.toString()).enqueue(object : Callback<Void> {
 //            override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
