@@ -26,9 +26,8 @@ class LoginActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<Jwt>?, response: Response<Jwt>?) {
                     if (response!!.isSuccessful) {
                         val res = response.body()
-                        Toast.makeText(baseContext, res!!.token, Toast.LENGTH_SHORT).show()
-
-                        Util.saveToken("JWT " + res.token, baseContext)
+                        Util.saveToken("JWT " + res!!.token, baseContext)
+                        Toast.makeText(baseContext, Util.getToken(baseContext), Toast.LENGTH_SHORT).show()
                     }
                     startActivity(Intent(baseContext, SetProfileActivity::class.java))
                     finish()

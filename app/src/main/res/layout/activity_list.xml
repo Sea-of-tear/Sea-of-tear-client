@@ -46,33 +46,21 @@
         android:weightSum="2">
 
         <TextView
-            android:id="@+id/input_edit_text"
+            android:id="@+id/list_text_category"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
-            android:gravity="bottom"
+            android:gravity="center"
             android:text="사랑(LOVE)"
             android:textColor="@color/colorPrimary"
             android:textSize="17dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginRight="20dp"
-            android:text="눈물 드라이어기"
-            android:textColor="@color/colorPrimary"
-            android:gravity="bottom|right"
-            android:textSize="17dp"
-            android:textStyle="bold"
-            android:drawableLeft="@drawable/hairdryer"/>
-
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/list"
+        android:id="@+id/list_post"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8" />
