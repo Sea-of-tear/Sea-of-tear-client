@@ -12,9 +12,5 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        join_btn.setOnClickListener{
-            startActivity(Intent(this, JoinActivity::class.java))
-            finish()
-        }
     }
 }

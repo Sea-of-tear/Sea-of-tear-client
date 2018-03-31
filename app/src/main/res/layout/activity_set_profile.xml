@@ -8,6 +8,18 @@
     android:orientation="vertical"
     tools:context="com.github.papered.a15th_appzam.Activity.SetProfileActivity">
 
+    <TextView
+    android:layout_width="90dp"
+    android:layout_height="50dp"
+    android:layout_gravity="right|top"
+    android:background="#fff"
+    android:text="뒤로"
+    android:textStyle="bold"
+    android:id="@+id/back_btn"
+    android:textSize="20dp"
+    android:gravity="center"
+    android:textColor="@color/colorPrimary"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="500dp"
@@ -19,7 +31,7 @@
             android:layout_width="200dp"
             android:layout_height="180dp"
             android:layout_marginTop="50dp"
-            android:background="#379fe1"
+            android:background="@color/colorPrimaryDark"
             android:id="@+id/profile_img"
             android:src="@drawable/ic_person_black_24dp" />
 
@@ -27,7 +39,7 @@
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginBottom="30dp"
-            android:background="#2f83c4"
+            android:background="@color/colorPrimary"
             android:gravity="center"
             android:text="프로필 이미지 추가"
             android:textColor="#fff"
@@ -40,13 +52,15 @@
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:hint="닉네임"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@color/colorPrimary"/>
 
         <EditText
             android:id="@+id/description"
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:hint="소개" />
+            android:hint="소개"
+            android:textColorHint="@color/colorPrimary" />
     </LinearLayout>
 
     <Button
