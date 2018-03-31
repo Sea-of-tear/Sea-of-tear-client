@@ -8,17 +8,29 @@
     android:orientation="vertical"
     tools:context="com.github.papered.a15th_appzam.Activity.SetProfileActivity">
 
-    <TextView
-        android:id="@+id/back_btn"
-        android:layout_width="90dp"
-        android:layout_height="50dp"
-        android:layout_gravity="right|top"
-        android:background="#fff"
-        android:gravity="center"
-        android:text="뒤로"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="프로필 입력"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,19 +62,29 @@
         <EditText
             android:id="@+id/setProfile_edit_nickname"
             android:layout_width="300dp"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Please enter a nickname"
+            android:textSize="12dp"
             android:inputType="text"
             android:maxLines="1"
-            android:layout_marginBottom="10dp"
-            android:hint="닉네임"
+            android:theme="@style/EditTextStyle"
             android:textColorHint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:textSize="12dp"
+            android:text="한줄소개"
+            android:textColor="@color/colorPrimary"
+            android:gravity="left|bottom"/>
 
         <EditText
             android:id="@+id/setProfile_edit_description"
             android:layout_width="300dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
+            android:background="@drawable/square"
             android:maxLines="1"
-            android:hint="한줄소개"
             android:textColorHint="@color/colorPrimary" />
 
     </LinearLayout>
@@ -70,7 +92,7 @@
     <Button
         android:id="@+id/setProfile_btn_submit"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_gravity="bottom"
         android:background="@color/colorPrimary"
         android:text="저장"
