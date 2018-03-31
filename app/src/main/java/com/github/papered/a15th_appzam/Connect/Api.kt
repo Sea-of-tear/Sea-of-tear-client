@@ -8,6 +8,7 @@ import retrofit2.http.*
  * Created by PaperEd on 2018-03-31.
  */
 interface Api {
+
     @POST("/login")
     @FormUrlEncoded
     fun auth(@Field("id") id: String, @Field("pw") pw: String): Call<Jwt>
@@ -18,7 +19,7 @@ interface Api {
 
     @POST("/my-page")
     @FormUrlEncoded
-    fun setProfile(@Header("Authorization") jwt: String, @Field("nickname") nickname: String, @Field("introduction") description: String): Call<Void>
+    fun setProfile(@Header("Authorization") Authorization: String, @Field("nickname") nickname: String, @Field("introduction") description: String): Call<Void>
 
 
 }

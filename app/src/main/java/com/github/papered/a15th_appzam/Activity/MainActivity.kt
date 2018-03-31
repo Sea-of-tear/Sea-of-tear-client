@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.github.papered.a15th_appzam.R
+import com.github.papered.a15th_appzam.R.id.main_categoryView
 import kotlinx.android.synthetic.main.activity_main.*
 
 

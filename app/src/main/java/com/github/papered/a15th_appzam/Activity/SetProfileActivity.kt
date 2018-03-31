@@ -54,14 +54,14 @@ class SetProfileActivity : AppCompatActivity() {
         }
 
         setProfile_btn_submit.setOnClickListener {
-            Connector.api.setProfile(Util.token, setProfile_edit_nickname.text.toString(), setProfile_edit_description.text.toString())
+            Connector.api.setProfile(Authorization = Util.getToken(baseContext), nickname = setProfile_edit_nickname.text.toString(), description = setProfile_edit_description.text.toString())
                     .enqueue(object : Callback<Void> {
                         override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
                             Toast.makeText(baseContext, "성공", Toast.LENGTH_SHORT).show()
                         }
 
                         override fun onFailure(call: Call<Void>?, t: Throwable?) {
-                            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
                         }
 
                     })

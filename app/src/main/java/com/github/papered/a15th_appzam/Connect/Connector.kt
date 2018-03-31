@@ -11,7 +11,7 @@ object Connector {
     init {
         val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("http://52.79.60.204:80")
+                .baseUrl("http://52.79.60.204:8080")
                 .build()
 
         api = retrofit.create(Api::class.java)

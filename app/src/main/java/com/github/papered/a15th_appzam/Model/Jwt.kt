@@ -8,8 +8,4 @@ import com.google.gson.annotations.SerializedName
 class Jwt {
     @SerializedName("access_token")
     var token: String = ""
-
-    fun saveToken(token: String) {
-        this.token = "JWT " + token
-    }
 }
