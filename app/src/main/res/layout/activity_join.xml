@@ -16,7 +16,8 @@
         android:textStyle="bold"
         android:id="@+id/back_btn"
         android:textSize="20dp"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,34 +34,39 @@
             android:gravity="center"
             android:textSize="30dp"
             android:layout_marginTop="30dp"
-            android:layout_marginBottom="60dp"/>
+            android:layout_marginBottom="60dp"
+            android:textColor="@color/colorPrimary"/>
 
         <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="ID"
             android:id="@+id/ID"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:textColorHint="@color/colorPrimary"/>
 
         <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="PASSWORD"
             android:id="@+id/PW"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:textColorHint="@color/colorPrimary"/>
 
         <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="PASSWORD COMFIRM"
             android:id="@+id/PW_confirm"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:textColorHint="@color/colorPrimary"/>
 
         <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="EMAIL"
             android:id="@+id/EMAIL"
+            android:textColorHint="@color/colorPrimary"
             android:layout_marginBottom="20dp"/>
 
     </LinearLayout>
