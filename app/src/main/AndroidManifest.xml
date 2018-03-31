@@ -31,7 +31,8 @@
         <activity android:name=".Activity.ContentActivity" />
         <activity android:name=".Activity.InputActivity" />
         <activity android:name=".Activity.ListActivity" />
-        <activity android:name=".Activity.RankActivity"></activity>
+        <activity android:name=".Activity.RankActivity" />
+        <activity android:name=".Activity.ProfileActivity"></activity>
     </application>
 
 </manifest>
