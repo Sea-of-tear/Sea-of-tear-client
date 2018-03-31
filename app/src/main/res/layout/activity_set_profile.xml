@@ -9,33 +9,34 @@
     tools:context="com.github.papered.a15th_appzam.Activity.SetProfileActivity">
 
     <TextView
-    android:layout_width="90dp"
-    android:layout_height="50dp"
-    android:layout_gravity="right|top"
-    android:background="#fff"
-    android:text="뒤로"
-    android:textStyle="bold"
-    android:id="@+id/back_btn"
-    android:textSize="20dp"
-    android:gravity="center"
-    android:textColor="@color/colorPrimary"/>
+        android:id="@+id/back_btn"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right|top"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="뒤로"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:orientation="vertical"
+        android:layout_gravity="top|center"
         android:gravity="center"
-        android:layout_gravity="top|center">
+        android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/setProfile_img_profile"
             android:layout_width="200dp"
             android:layout_height="180dp"
             android:layout_marginTop="50dp"
             android:background="@color/colorPrimaryDark"
-            android:id="@+id/profile_img"
             android:src="@drawable/ic_person_black_24dp" />
 
         <Button
+            android:id="@+id/setProfile_btn_addImg"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginBottom="30dp"
@@ -44,16 +45,15 @@
             android:text="프로필 이미지 추가"
             android:textColor="#fff"
             android:textSize="20dp"
-            android:id="@+id/add_img"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/nickname"
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:hint="닉네임"
             android:layout_marginBottom="10dp"
-            android:textColorHint="@color/colorPrimary"/>
+            android:hint="닉네임"
+            android:textColorHint="@color/colorPrimary" />
 
         <EditText
             android:id="@+id/description"
@@ -66,8 +66,8 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/colorPrimary"
         android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
         android:text="저장"
         android:textColor="#fff"
         android:textSize="20dp"

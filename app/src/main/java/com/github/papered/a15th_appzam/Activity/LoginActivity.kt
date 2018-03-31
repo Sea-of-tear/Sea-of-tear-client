@@ -19,21 +19,21 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         login_btn_submit.setOnClickListener {
-            Connector.api.auth(login_edit_id.text.toString(), login_edit_pw.text.toString()).enqueue(object : Callback<Void> {
-                override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
-                    if (response!!.isSuccessful) {
-                        when (response.code()) {
+            startActivity(Intent(this, SetProfileActivity::class.java))
+//            Connector.api.auth(login_edit_id.text.toString(), login_edit_pw.text.toString()).enqueue(object : Callback<Void> {
+//                override fun onResponse(call: Call<Void>?, response: Response<Void>?) {
+//                    if (response!!.isSuccessful) {
+//                        when (response.code()) {
+//
+//                        }
+//                    }
+//                }
+//
+//                override fun onFailure(call: Call<Void>?, t: Throwable?) {
+//                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//                }
 
-                        }
-                    }
-                }
-
-                override fun onFailure(call: Call<Void>?, t: Throwable?) {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                }
-
-            })
         }
-
     }
+
 }
